@@ -1,6 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
-import img1 from '../assets/img1.png'
+import React from 'react';
+import styled from 'styled-components';
+import img1 from '../assets/img1.png';
+import icon1 from "../assets/uiux.png";
+import icon2 from "../assets/tools.png";
+import icon3 from "../assets/pen.png";
+import icon4 from "../assets/laptop.png";
 
 import { useState, useEffect } from 'react';
 
@@ -33,11 +37,18 @@ const Container = styled.div`
     font-size: 20px;
     font-weight: 600;
     line-height: 58px;
-    letter-spacing: 0em;
-   
-
-    
+    letter-spacing: 0em;    
    }
+   .link1:hover
+   {color:#63E7DA;
+  text-shadow:0px 0px 30px #63E7DA;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  font-size:30px;
+   }
+
    .icon{
     display:none;
    }
@@ -80,6 +91,15 @@ const Container = styled.div`
     margin: 24vh 0 0 20vh;
     color:white;
 }
+.h11:hover{
+    color:#63E7DA;
+  text-shadow:0px 0px 40px #63E7DA;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+ 
+}
 .ux{
     color:#63E7DA
 }
@@ -88,6 +108,7 @@ font-family: Merienda;
 font-size: 20px;
 font-weight: 200;
 margin-top:-13px;
+
 }
 .work{
     margin-top: -30px;
@@ -95,13 +116,33 @@ margin-top:-13px;
     justify-content:space-between;
   
 }
-svg{
+/* svg{
     width: 300px;
 height: 300px;
 flex-shrink: 0;
 fill: #3C3C3C;
 stroke-width: 5px;
 stroke: #63E7DA;
+} */
+.def{
+   color: #8F8F8F;
+font-family: Montserrat;
+font-size: 60px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.topic{
+    font-family: Montserrat;
+font-size: 60px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.27) 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin:40px 0 40px 0;
 }
 
 
@@ -168,23 +209,46 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="name">
-                    <h1 >VECTOR<span className='ux'>UX</span></h1>
+                    <h1 className='h11'>VECTOR<span className='ux'>UX</span></h1>
                     <div className='vectorabt'>we ideate, create <span className='ux' >&</span> innovate</div>
                 </div>
             </div>
             <div className="work">
-                <svg xmlns="http://www.w3.org/2000/svg" width="594" height="832" viewBox="0 0 594 832" fill="none">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 594 832" fill="none">
                     <path d="M2.5 5.00002C2.5 3.6193 3.6193 2.5 5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V5.00002Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="5" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="594" height="832" viewBox="0 0 594 832" fill="none">
+
+                    <foreignObject x="40" y="150" width="531" height="531">
+                        <img src={icon1} width={100} height={100} />
+                        <div className='topic'>UI & UX</div>
+                        <div className="def"> Designing interfaces that are intuitive, efficient, and enjoyable to use.</div>
+                    </foreignObject></svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 594 832" fill="none">
                     <path d="M2.5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V2.5Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="5" />
+                    <foreignObject x="40" y="150" width="531" height="531">
+                        <img src={icon2} width={100} height={100} />
+                        <div className='topic'>Web & Mobile App</div>
+                        <div className="def">Transforming ideas into exceptional web and mobile app experiences.</div>
+                    </foreignObject>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="594" height="832" viewBox="0 0 594 832" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 594 832" fill="none">
                     <path d="M2.5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V2.5Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="5" />
+                    <foreignObject x="40" y="150" width="531" height="531">
+                        <img src={icon3} width={100} height={100} />
+                        <div className='topic'>Design & Creative</div>
+                        <div className="def">Crafting visually stunning designs that connect with your audience.</div>
+                    </foreignObject>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="594" height="832" viewBox="0 0 594 832" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 594 832" fill="none">
                     <path d="M2.5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V2.5Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="5" />
+                    <foreignObject x="40" y="150" width="531" height="531">
+                        <img src={icon4} width={100} height={100} />
+                        <div className='topic'>Development</div>
+                        <div className="def">Bringing your vision to life with the latest technology and design trends.</div>
+                    </foreignObject>
                 </svg>
+
 
             </div>
         </Container >

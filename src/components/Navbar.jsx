@@ -10,7 +10,7 @@ const Container = styled.div`
     .bgimg{
         background-image:url(${img1});
         background-size: 100% 100%;
-    height: 100vh;
+    height: 60vh;
     width: 100%;
     
     }
@@ -47,14 +47,14 @@ const Container = styled.div`
    
 
 .side-nav{
-    width:130px;
-    height:20vh;
+    width:100px;
+    height:15vh;
     background-color:#63E7DA;
     position:absolute;
     top:0;
     left:0;
     transform:translateY(${(props => props.value ? "0px" : "-300px")});
-    transition: all 1.5s ease;
+    transition: all 1s ease;
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -63,7 +63,7 @@ const Container = styled.div`
 }
 
    .link1-side{
-    font-size: 20px;
+    font-size: 15px;
     margin: 10px 0 20px 0px;
     font-family: Lato;
     font-weight: 600;
@@ -77,7 +77,7 @@ const Container = styled.div`
     font-size: 20px;
     font-weight: 400;
     text-align: left;
-    margin: 40vh 0 0 20vh;
+    margin: 24vh 0 0 20vh;
     color:white;
 }
 .ux{
@@ -89,12 +89,27 @@ font-size: 20px;
 font-weight: 200;
 margin-top:-13px;
 }
+.work{
+    margin-top: -30px;
+    display:flex;
+    justify-content:space-between;
+  
+}
+svg{
+    width: 300px;
+height: 300px;
+flex-shrink: 0;
+fill: #3C3C3C;
+stroke-width: 5px;
+stroke: #63E7DA;
+}
+
 
 @media screen and (max-width: 600px) {
     .icon{
         display:flex;
         float:left;
-        margin-right: 10px;
+        margin: 10px 10px 0 0;
         color: #63E7DA;
     }
     .links{
@@ -106,16 +121,20 @@ margin-top:-13px;
     
     font-size: 10px;
     font-weight: 200;
-    margin: 40vh 0 0 4vh;
+    margin: 24vh 0 0 4vh;
 }
 
 .vectorabt{
 font-size: 10px;
 font-weight: 100;
 }
-    
-    
-    
+
+svg{
+    width: 100px;
+height: 100px;
+flex-shrink: 0;
+}
+
 }
 
 
@@ -152,6 +171,20 @@ const Navbar = () => {
                     <h1 >VECTOR<span className='ux'>UX</span></h1>
                     <div className='vectorabt'>we ideate, create <span className='ux' >&</span> innovate</div>
                 </div>
+            </div>
+            <div className="work">
+                <svg xmlns="http://www.w3.org/2000/svg" width="594" height="832" viewBox="0 0 594 832" fill="none">
+                    <path d="M2.5 5.00002C2.5 3.6193 3.6193 2.5 5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V5.00002Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="5" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="594" height="832" viewBox="0 0 594 832" fill="none">
+                    <path d="M2.5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V2.5Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="5" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="594" height="832" viewBox="0 0 594 832" fill="none">
+                    <path d="M2.5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V2.5Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="5" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="594" height="832" viewBox="0 0 594 832" fill="none">
+                    <path d="M2.5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V2.5Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="5" />
+                </svg>
 
             </div>
         </Container >

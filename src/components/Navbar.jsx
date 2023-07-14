@@ -5,7 +5,6 @@ import icon1 from "../assets/uiux.png";
 import icon2 from "../assets/tools.png";
 import icon3 from "../assets/pen.png";
 import icon4 from "../assets/laptop.png";
-
 import { useState, useEffect } from 'react';
 
 const Container = styled.div`
@@ -34,7 +33,7 @@ const Container = styled.div`
    .link1{
     margin-right: 40px;
     font-family: Lato;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     line-height: 58px;
     letter-spacing: 0em;    
@@ -46,7 +45,7 @@ const Container = styled.div`
   -o-transition: all 0.1s ease-in;
   -webkit-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
-  font-size:30px;
+  font-size:20px;
    }
 
    .icon{
@@ -90,7 +89,12 @@ const Container = styled.div`
     text-align: left;
     margin: 24vh 0 0 20vh;
     color:white;
+   
 }
+.h11{
+    letter-spacing:0.3em;
+}
+
 .h11:hover{
     color:#63E7DA;
   text-shadow:0px 0px 40px #63E7DA;
@@ -98,14 +102,14 @@ const Container = styled.div`
   -o-transition: all 0.1s ease-in;
   -webkit-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
- 
+  
 }
 .ux{
     color:#63E7DA
 }
 .vectorabt{
 font-family: Merienda;
-font-size: 20px;
+font-size: 15px;
 font-weight: 200;
 margin-top:-13px;
 
@@ -116,18 +120,14 @@ margin-top:-13px;
     justify-content:space-between;
   
 }
-/* svg{
-    width: 300px;
-height: 300px;
-flex-shrink: 0;
-fill: #3C3C3C;
-stroke-width: 5px;
-stroke: #63E7DA;
-} */
+ svg:hover{
+    height:270px;
+    
+} 
 .def{
    color: #8F8F8F;
 font-family: Montserrat;
-font-size: 60px;
+font-size: 54px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
@@ -215,34 +215,34 @@ const Navbar = () => {
             </div>
             <div className="work">
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 594 832" fill="none">
-                    <path d="M2.5 5.00002C2.5 3.6193 3.6193 2.5 5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V5.00002Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="5" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="250" viewBox="0 0 594 832" fill="none">
+                    <path d="M2.5 5.00002C2.5 3.6193 3.6193 2.5 5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V5.00002Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="10" />
 
-                    <foreignObject x="40" y="150" width="531" height="531">
+                    <foreignObject x="40" y="130" width="531" height="700">
                         <img src={icon1} width={100} height={100} />
                         <div className='topic'>UI & UX</div>
                         <div className="def"> Designing interfaces that are intuitive, efficient, and enjoyable to use.</div>
                     </foreignObject></svg>
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 594 832" fill="none">
-                    <path d="M2.5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V2.5Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="5" />
-                    <foreignObject x="40" y="150" width="531" height="531">
+                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="250" viewBox="0 0 594 832" fill="none">
+                    <path d="M2.5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V2.5Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="10" />
+                    <foreignObject x="40" y="130" width="531" height="700">
                         <img src={icon2} width={100} height={100} />
                         <div className='topic'>Web & Mobile App</div>
                         <div className="def">Transforming ideas into exceptional web and mobile app experiences.</div>
                     </foreignObject>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 594 832" fill="none">
-                    <path d="M2.5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V2.5Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="5" />
-                    <foreignObject x="40" y="150" width="531" height="531">
+                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="250" viewBox="0 0 594 832" fill="none">
+                    <path d="M2.5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V2.5Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="10" />
+                    <foreignObject x="40" y="130" width="531" height="700">
                         <img src={icon3} width={100} height={100} />
                         <div className='topic'>Design & Creative</div>
                         <div className="def">Crafting visually stunning designs that connect with your audience.</div>
                     </foreignObject>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 594 832" fill="none">
-                    <path d="M2.5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V2.5Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="5" />
-                    <foreignObject x="40" y="150" width="531" height="531">
+                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="250" viewBox="0 0 594 832" fill="none">
+                    <path d="M2.5 2.5H494C547.848 2.5 591.5 46.1522 591.5 100V829.5H100C46.1522 829.5 2.5 785.848 2.5 732V2.5Z" fill="#3C3C3C" stroke="#63E7DA" stroke-width="10" />
+                    <foreignObject x="40" y="130" width="531" height="700">
                         <img src={icon4} width={100} height={100} />
                         <div className='topic'>Development</div>
                         <div className="def">Bringing your vision to life with the latest technology and design trends.</div>

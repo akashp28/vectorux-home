@@ -171,7 +171,7 @@ font-weight: 100;
 }
 
 svg{
-    width: 100px;
+    width: 80px;
 height: 100px;
 flex-shrink: 0;
 }
@@ -196,7 +196,7 @@ const Navbar = () => {
                         <div className="link1">CONTACT</div>
                     </div>
                     <div className="icon" onClick={() => setstate(!state)}>
-                        <i className="fa-solid fa-bars"></i>
+                        <i className="fa-solid fa-bars fa-shake fa-xl"></i>
                     </div>
                 </div>
                 <div className="side-nav">

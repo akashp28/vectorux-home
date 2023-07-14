@@ -6,7 +6,7 @@ import laptop2 from '../assets/laptop2.png'
 const Container2 = styled.div`
 background-color: #191A1D;
 width:100%;
-height:100vh;
+
 
 .laptop-div{
     display:flex;
@@ -37,8 +37,7 @@ height:100vh;
 }
 .offer{
     width:100%;
-    height:80vh;
-    /* background-color:red; */
+    
 }
 .offer-title{
     font-family: Atma;
@@ -54,7 +53,7 @@ height:100vh;
 .offer-content{
     display:flex;
     flex-direction:row;
-    height:50vh;
+    
     width:100%;
   
    
@@ -137,6 +136,34 @@ margin:40px 10px 0 10px;
     .offer-title{
         font-size: 20px;
 
+    }
+    .offer-content{
+        display:flex;
+        float:left;
+        width:100%;
+        margin: -80px 0px 0 0px;
+       
+        
+    }
+    .content1 {
+      
+        margin:0;
+    }
+    .content3{
+      
+       margin: 0;
+    }
+
+    .vector{
+        height:50px;
+        width:50px;
+    }
+    .content-head{
+        font-size: 9.2px;
+    }
+    .content-def{
+        font-size: 7px;
+        margin-top:10px ;
     }
   
    

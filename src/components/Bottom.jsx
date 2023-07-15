@@ -20,6 +20,10 @@ width:100%;
     align-content: center;
     align-items:center;
 }
+.logo-div img:hover{
+    width:200px;
+    
+}
 .contact{
     display:flex;
     justify-content:center;

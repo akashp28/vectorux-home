@@ -50,6 +50,8 @@ width:100%;
     -webkit-text-fill-color: transparent;
     margin: -40px 0 0 40px;
 }
+
+
 .offer-content{
     display:flex;
     flex-direction:row;

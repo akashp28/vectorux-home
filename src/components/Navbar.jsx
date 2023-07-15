@@ -47,6 +47,7 @@ const Container = styled.div`
   transition: all 0.1s ease-in;
   font-size:20px;
    }
+   
 
    .icon{
     display:none;
@@ -54,11 +55,15 @@ const Container = styled.div`
 .img1{
     width:100%;
 }
+
+.nav-icon{
+    margin: 20px 10px 0 0;
+}
    
 
 .side-nav{
     width:100px;
-    height:15vh;
+    height:120px;
     background-color:#63E7DA;
     position:absolute;
     top:0;
@@ -68,16 +73,17 @@ const Container = styled.div`
     display:flex;
     flex-direction:column;
     align-items: center;
-    border-radius: 0px 0px 300px 200px;
+    border-radius: 0px 0px 20px 20px;
     
 }
 
    .link1-side{
     font-size: 15px;
-    margin: 10px 0 20px 0px;
+    margin: 15px 0 20px 0px;
     font-family: Lato;
-    font-weight: 600;
+    font-weight: 900;
     text-transform: capitalize;
+   
    }
 .name{
     display:flex;
@@ -89,12 +95,17 @@ const Container = styled.div`
     text-align: left;
     margin: 24vh 0 0 20vh;
     color:white;
-   
 }
+ .name1{
+   animation: color-animation 1.3s linear infinite;
+ }  
+   
 .h11{
     letter-spacing:0.3em;
+    --color-1:  #63E7DA;
+    --color-2: white;
 }
-
+/* 
 .h11:hover{
     color:#63E7DA;
   text-shadow:0px 0px 40px #63E7DA;
@@ -103,15 +114,30 @@ const Container = styled.div`
   -webkit-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
   
+} */
+.s1{
+    color: #63E7DA;
 }
 .ux{
-    color:#63E7DA
+   
+    --color-2:  #63E7DA;
+    --color-1: white;
 }
+@keyframes color-animation {
+    0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-1)}
+  99%   {color: var(--color-1)}
+  100%  {color: var(--color-1)}
+}
+
 .vectorabt{
 font-family: Merienda;
 font-size: 15px;
 font-weight: 200;
-margin-top:-13px;
+margin-top:-24px;
 
 }
 .work{
@@ -146,11 +172,12 @@ margin:40px 0 40px 0;
 }
 
 
+
 @media screen and (max-width: 600px) {
     .icon{
         display:flex;
         float:left;
-        margin: 10px 10px 0 0;
+        margin: 15px 10px 0 0;
         color: #63E7DA;
     }
     .links{
@@ -166,8 +193,9 @@ margin:40px 0 40px 0;
 }
 
 .vectorabt{
-font-size: 10px;
+font-size: 8px;
 font-weight: 100;
+margin-top: -8px;
 }
 
 svg{
@@ -175,6 +203,11 @@ svg{
 height: 100px;
 flex-shrink: 0;
 }
+
+svg:hover{
+    height:120px;
+    
+} 
 
 }
 
@@ -191,9 +224,9 @@ const Navbar = () => {
                 <div className="nav-main">
 
                     <div className="links">
-                        <div className="link1">HOME</div>
-                        <div className="link1">ABOUT</div>
-                        <div className="link1">CONTACT</div>
+                        <div className="nav-icon"><i class="fa-solid fa-house" ></i></div> <div className="link1">HOME</div>
+                        <div className="nav-icon"><i class="fa-brands fa-searchengin" ></i></div><div className="link1">ABOUT</div>
+                        <div className="nav-icon"><i class="fa-solid fa-phone" ></i></div><div className="link1">CONTACT</div>
                     </div>
                     <div className="icon" onClick={() => setstate(!state)}>
                         <i className="fa-solid fa-bars fa-shake fa-xl"></i>
@@ -202,15 +235,16 @@ const Navbar = () => {
                 <div className="side-nav">
 
                     <div className="links-side">
-                        <div className="link1-side">HOME</div>
-                        <div className="link1-side">ABOUT</div>
-                        <div className="link1-side">CONTACT</div>
+                        <div className="link1-side"><i class="fa-solid fa-house" ></i>HOME</div>
+                        <div className="link1-side"><i class="fa-brands fa-searchengin" ></i>ABOUT</div>
+                        <div className="link1-side"><i class="fa-solid fa-phone" ></i>CONTACT</div>
 
                     </div>
                 </div>
                 <div className="name">
-                    <h1 className='h11'>VECTOR<span className='ux'>UX</span></h1>
-                    <div className='vectorabt'>we ideate, create <span className='ux' >&</span> innovate</div>
+                    <div className='name1'>
+                        <h1 className='name1 h11'>VECTOR<span className='name1 ux'>UX</span></h1></div>
+                    <div className='vectorabt'>we ideate, create <span className='s1' >&</span> innovate</div>
                 </div>
             </div>
             <div className="work">

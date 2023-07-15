@@ -144,6 +144,9 @@ line-height: normal;
         height:60px;
 
     }
+    .logo-div img:hover{
+        width:80px;
+    }
     .contact{
             font-size:10px;
             margin-left: 0;

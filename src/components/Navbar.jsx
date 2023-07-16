@@ -97,7 +97,7 @@ const Container = styled.div`
     color:white;
 }
  .name1{
-   animation: color-animation 1.3s linear infinite;
+   animation: color-animation .8s linear infinite;
  }  
    
 .h11{
@@ -105,8 +105,8 @@ const Container = styled.div`
     --color-1:  #63E7DA;
     --color-2: white;
 }
-/* 
-.h11:hover{
+
+.vectorabt:hover{
     color:#63E7DA;
   text-shadow:0px 0px 40px #63E7DA;
   -moz-transition: all 0.1s ease-in;
@@ -114,7 +114,7 @@ const Container = styled.div`
   -webkit-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
   
-} */
+} 
 .s1{
     color: #63E7DA;
 }
@@ -148,6 +148,7 @@ margin-top:-24px;
 }
  svg:hover{
     height:270px;
+    width:400px
     
 } 
 .def{
@@ -206,7 +207,7 @@ flex-shrink: 0;
 
 svg:hover{
     height:120px;
-    
+    width:100px;
 } 
 
 }

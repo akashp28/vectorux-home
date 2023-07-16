@@ -16,14 +16,12 @@ width:100%;
     display:flex;
     flex-direction: column;
     width:100%;
-    margin:0px 40px 0 40px;
+    margin:-30px 40px 0 40px;
+    justify-content:center;
     align-content: center;
     align-items:center;
 }
-.logo-div img:hover{
-    width:200px;
-    
-}
+
 .contact{
     display:flex;
     justify-content:center;
@@ -54,6 +52,9 @@ button{
     height:20px;
     width:60px;
     color:white;
+}
+button:hover{
+    background-color:lightgreen;
 }
 .talk{
     color: #FFF;
@@ -122,7 +123,63 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+.logo-img img{
+    margin:auto;
+    display:block;
 
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(2turn);
+  }
+}
+
+.logo-img {
+  position: relative;
+  z-index: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   justify-content: center;
+    width:155px;
+    height:155px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+  
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: linear-gradient(#63E7DA,#63E7DA), linear-gradient(#191A1D,#191A1D), linear-gradient(#63E7DA,#63E7DA), linear-gradient(#191A1D,#191A1D);
+    animation: rotate 5s linear infinite;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    background: white;
+    border-radius: 5px;
+    
+  }
+}
 
 
 @media screen and (max-width: 600px) {
@@ -135,7 +192,7 @@ line-height: normal;
     }
     .logo-div{
         margin-left: 0;
-        
+        margin-top: -20px; 
     }
 
     .logo-div img{
@@ -144,9 +201,7 @@ line-height: normal;
         height:60px;
 
     }
-    .logo-div img:hover{
-        width:80px;
-    }
+   
     .contact{
             font-size:10px;
             margin-left: 0;
@@ -162,15 +217,16 @@ line-height: normal;
     .about{
         font-size:8px;
         margin-top: 10px;
+        padding-right: 1px;
     }
     .span-talk{
         font-size:10px;
     }
     .msg{
-        margin-left:0px;
-        width:80px;
        
-        font-size:10px;
+        width:80px;
+       margin: 10px 0 0 0;
+        font-size:8px;
     }
     button{
         width:40px;
@@ -199,6 +255,11 @@ line-height: normal;
     .span-connect{
         font-size:10px;
     }
+    .logo-img{
+    width:63px;
+    height:63px;
+    border-radius: 3px;
+}
 }
 
 
@@ -213,7 +274,7 @@ const Bottom = () => {
         <Container3>
             <div className="bottom-content">
                 <div className="logo-div">
-                    <img src={logo1} alt="" srcset="" width={150} height={150} />
+                    <div className="logo-img"><img src={logo1} alt="" srcset="" width={150} height={150} /></div>
                     <div><input type="text" className='msg' placeholder='write a message' />
                         <button>send</button>
                     </div>

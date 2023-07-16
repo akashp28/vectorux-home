@@ -229,9 +229,9 @@ line-height: normal;
         font-size:8px;
     }
     button{
-        width:40px;
-        height:15px;
-        font-size:10px;
+        width:33px;
+        height:13px;
+        font-size:9px;
     }
     
     .emailid{
